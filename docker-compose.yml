@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  seed_mongo:
+    image: moradlarbi/seed_mongo 
+    depends_on:
+      - mongodb
+
+  coffee:
+    build: ./coffee
+    depends_on:
+      - seed_mongo
