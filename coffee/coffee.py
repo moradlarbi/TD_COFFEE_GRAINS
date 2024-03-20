@@ -1,6 +1,6 @@
 import pymongo
 from pymongo import MongoClient
-from grain import Grain  # Importez la classe Grain depuis votre fichier grain.py
+from grain import Grain  
 
 def check_grain_validity(grain_data):
     grain = Grain()
